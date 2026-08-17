@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-persian: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    --color-deep-teal: #004F54;
+    --color-dark-teal: #003B40;
+    --color-turquoise: #008D8B;
+    --color-muted-gold: #B38A55;
+    --color-warm-gold: #C8A56A;
+    --color-warm-white: #F7F5F0;
+    --color-soft-stone: #ECE9E2;
+    --color-charcoal: #111817;
+    --color-text-grey: #616866;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-warm-white);
+    color: var(--color-charcoal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  [dir="rtl"] {
+    font-family: var(--font-persian), 'Vazirmatn', sans-serif;
+  }
+
+  [dir="rtl"] * {
+    font-family: var(--font-persian), 'Vazirmatn', sans-serif;
+  }
+
+  [dir="rtl"] .font-serif,
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] h5,
+  [dir="rtl"] h6 {
+    font-family: var(--font-persian), 'Vazirmatn', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-persian {
+  font-family: var(--font-persian);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ECE9E2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #004F54;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #008D8B;
+}
+
+/* Subtle architectural grid pattern */
+.bg-arch-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 79, 84, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 79, 84, 0.04) 1px, transparent 1px);
+}
+
+.bg-arch-grid-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(200, 165, 106, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(200, 165, 106, 0.08) 1px, transparent 1px);
+}
+
+/* Print Styles */
+@media print {
+  header, footer, .no-print {
+    display: none !important;
+  }
+}

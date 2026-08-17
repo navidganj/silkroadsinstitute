@@ -1,0 +1,6 @@
+{
+  "name": "Silk Road Architecture Development Institute",
+  "description": "International digital knowledge infrastructure, architectural atlas, archive, observatory, and research platform for Silk Road countries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
